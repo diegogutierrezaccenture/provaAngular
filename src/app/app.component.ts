@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AppComponent implements OnInit {
   ngOnInit(): void {
-    console.log("Hey!")
+    alert("Web iniciada!")
   }
-  title = 'my-app';
+  title = 'Prova';
 }
