@@ -1,0 +1,24 @@
+<div class="card">
+    <img [src]="product.image" alt="Producto">
+    <div class="card-content">
+        <h2>{{product.name | uppercase}}</h2>
+        <p>{{product.date | date}}</p>
+        <p>{{product.description}}</p>
+        <div class="price">
+            <p>{{product.price | currency}}</p>
+        </div>
+    </div>
+    <div class="buttonContanier">
+        <button (click)="addToCart()">ADD CART</button>
+        <button (click)="showBuyForm()" [disabled]="!(product.unitAvailable >= 1)">BUY</button>
+    </div>
+</div>
+<form class="form" [style.display]="formVisible">
+    <h1>Dades de compra</h1>
+    <label for="codiClient">Codi Client: </label>
+    <input [(ngModel)]="clientCode" type="text" name="codiClient" id="codiClient">
+    <label for="adreca">Adreça: </label>
+    <input [(ngModel)]="direction" type="text" name="adreca" id="adreca">
+    <br>
+    <button type="submit" (click)="buyProduct()">ORDER</button>
+</form>

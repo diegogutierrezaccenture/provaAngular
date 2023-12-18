@@ -1,10 +1,13 @@
-<div>
+<div class="contenidorPrincipal">
     <!-- HeaderComponent -->
     <app-header></app-header>
 
     <h1>{{ title }}</h1>
     <!-- Otro contenido del componente principal si es necesario -->
+    <div class="productsContainer" *ngFor="let product of products">
+        <app-product-card [product]="product"></app-product-card>
+    </div>
 
-
-    <!-- Otro contenido del componente principal si es necesario -->
+    <!-- Footer -->
+    <app-footer></app-footer>
 </div>
