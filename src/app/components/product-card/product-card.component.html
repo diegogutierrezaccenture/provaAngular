@@ -2,6 +2,11 @@
     <img [src]="product.image" alt="Producto">
     <div class="card-content">
         <h2>{{product.name | uppercase}}</h2>
+        <ng-container [ngSwitch]="product.category">
+            <p *ngSwitchCase="'Food'" [ngStyle]="{color: 'red'}">{{product.category}}</p>
+            <p *ngSwitchCase="'Tech'" [ngStyle]="{color: 'blue'}">{{product.category}}</p>
+            <p *ngSwitchCase="'Category'" [ngStyle]="{color: 'green'}">{{product.category}}</p>
+        </ng-container>
         <p>{{product.date | date}}</p>
         <p>{{product.description}}</p>
         <div class="price">

@@ -2,12 +2,14 @@
     <!-- HeaderComponent -->
     <app-header></app-header>
 
-    <h1>{{ title }}</h1>
-    <!-- Otro contenido del componente principal si es necesario -->
-    <div class="productsContainer" *ngFor="let product of products">
-        <app-product-card [product]="product"></app-product-card>
-    </div>
+    <!-- Contingut principal -->
+    <app-about-us></app-about-us>
+    <app-products></app-products>
 
     <!-- Footer -->
     <app-footer></app-footer>
 </div>
+
+<ng-template #noProducts>
+    <h1>No hi han productes disponibles.</h1>
+</ng-template>

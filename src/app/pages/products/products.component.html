@@ -1,0 +1,16 @@
+<h1>{{ title }}</h1>
+<ng-container *ngIf="products.length > 0; else noProducts">
+    <div class="contenidorProductes">
+        <ng-container *ngFor="let product of products">
+            <ng-container *ngIf="product.unitAvailable > 0">
+                <div class="individualProductContainer">
+                    <app-product-card [product]="product"></app-product-card>
+                </div>
+            </ng-container>
+        </ng-container>
+    </div>
+</ng-container>
+
+<ng-template #noProducts>
+    <h1>No hi han productes disponibles.</h1>
+</ng-template>

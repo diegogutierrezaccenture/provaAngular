@@ -24,7 +24,7 @@ export class ProductCardComponent {
       this.direction = '';
     }
     else
-      alert("Falta informació en ${}les dades de compra!")
+      alert("Falta informació en les dades de compra!")
   }
 
   addToCart() {

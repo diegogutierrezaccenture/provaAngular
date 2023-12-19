@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 export const products = [
   {
@@ -90,17 +90,16 @@ export const products = [
 ];
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  selector: 'app-products',
+  templateUrl: './products.component.html',
+  styleUrl: './products.component.scss'
 })
-export class AppComponent implements OnInit {
-
+export class ProductsComponent {
   title = 'PRODUCTES:';
 
   products: any;
 
   ngOnInit(): void {
-      this.products = products
+    this.products = products
   }
 }
