@@ -6,6 +6,7 @@ import { HeaderComponent } from './header/header.component';
 import { ProductCardComponent } from './product-card/product-card.component';
 import { UserCardComponent } from './user-card/user-card.component';
 import { FormsModule } from '@angular/forms';
+import { AppRoutingModule } from '../app-routing.module';
 
 
 
@@ -19,12 +20,13 @@ import { FormsModule } from '@angular/forms';
   ],
   imports: [
     CommonModule,
-    FormsModule
+    FormsModule,
+    AppRoutingModule
   ],
   exports: [
-    FooterComponent,
     HeaderComponent,
-    ProductCardComponent
+    ProductCardComponent,
+    FooterComponent,
   ]
 })
 export class ComponentsModule { }

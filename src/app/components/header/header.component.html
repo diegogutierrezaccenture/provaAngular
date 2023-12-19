@@ -1,5 +1,7 @@
 <header class="headerContainer">
     <app-avatar [userInfo]="userInfo"></app-avatar>
-    <p>{{userInfo.name}}</p>
+    <a routerLink="/products" routerLinkActive="active" class="elementNavegacio">PRODUCTES</a>
+    <a routerLink="/about-us" routerLinkActive="active" class="elementNavegacio">ABOUT US</a>
+    <p>Username: {{userInfo.name}}</p>
 </header>
 <hr>
