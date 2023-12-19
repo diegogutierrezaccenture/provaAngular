@@ -1,5 +1,5 @@
 <h1>{{ title }}</h1>
-<ng-container *ngIf="products.length > 0; else noProducts">
+<ng-container *ngIf="products && products.length > 0; else noProducts">
     <div class="contenidorProductes">
         <ng-container *ngFor="let product of products">
             <ng-container *ngIf="product.unitAvailable > 0">
